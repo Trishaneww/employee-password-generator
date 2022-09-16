@@ -6,14 +6,14 @@ As technology advances it is crucial, now more than ever, for users to impliment
 
 ## features
 
-This application has an abundance of features as foolows:
+This application has an abundance of features as follows:
 
 - Gives the user the option to choose their desired password length
 - Gives the user the option to include lowercase, uppercase, numeric and/or special charcters in their password
 - Selects completely random values within the desired parameters
 - Automatically copies the generated password to the users password for convenience
 
-
+Link to the [Live Webpage](https://trishaneww.github.io/employee-password-generator/)
 ## Credits
 
 Trishane Wijeyawickrema 
