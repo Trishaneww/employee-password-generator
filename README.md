@@ -2,7 +2,7 @@
 
 ## Overview
 
-It is crucial, now more than ever, for users to impliment strong passwords to protect their devices from hackers and malicious software. It is vital employees of any sort protect their personal data.
+As technology advances it is crucial, now more than ever, for users to impliment strong passwords to protect their devices from hackers and malicious software. It is vital employees of any sort protect their personal data.
 
 ## features
 
