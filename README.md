@@ -20,8 +20,6 @@ Link to the [Live Webpage](https://trishaneww.github.io/employee-password-genera
 
 Trishane Wijeyawickrema 
 
-HTML, CSS and starter JavaScript - UofT Coding Bootcamp - https://github.com/coding-boot-camp
-
 Link to [GitHub Repository](https://github.com/Trishaneww/employee-password-generator)
 
 ## Liscence
