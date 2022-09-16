@@ -13,7 +13,7 @@ This application has an abundance of features as follows:
 - Selects completely random values within the desired parameters
 - Automatically copies the generated password to the users password for convenience
 
-![screenshot](employee-password-generator.png)
+![screenshot](develop/images/employee-password-generator.png)
 
 Link to the [Live Webpage](https://trishaneww.github.io/employee-password-generator/)
 ## Credits
