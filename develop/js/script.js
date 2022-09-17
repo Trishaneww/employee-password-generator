@@ -22,9 +22,9 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
 
-// prompts the user to select their desired character count, for their password
+// Prompts the user to select their desired character count, for their password
 function generatePassword() {
-  passwordLength = window.prompt("How many characters long do you want your password to be? A strong password required 8-128 characters!");
+  passwordLength = prompt("How many characters long do you want your password to be? A strong password required 8-128 characters!");
 
   // If the users selection satisfies the parameters, the createPassword() function will run
   if (passwordLength >= 8 && passwordLength <= 128) {
@@ -34,52 +34,55 @@ function generatePassword() {
   // If they choose cancel, they will be greeted by a departing message, and the  popup window will close
   } else {
     if (
-      window.confirm("You entered an invalid length! Would you like to try again?")
+      confirm("You entered an invalid length! Would you like to try again?")
     ) {
       generatePassword();
     } else {
-      window.alert('We hope to see you again!');
+      alert('We hope to see you again!');
     }
   }
 }
-//createPassword will be called in the generatePassword() once all error checking is met.
+
 //createPassword will prompt user through the password preference selections then proceeds to combine the ASCII characters that has been assigned from earlier into an array.
 //Then Math.random() will pick randomly through the array and attach itself to the empty string for the final password.
-function createPassword() {
-  let upperSelect;
-  let lowerSelect;
-  let numSelect;
-  let specialSelect;
+function createPassword() { //createPassword is the function called from within generatePassword if all parameters are satisfied
+  let selectUpper;
+  let selectLower;
+  let selectNum;
+  let selectSpecial;
   let combinedArray = [];
   let password = '';
 
-  upperSelect = window.confirm('Would you prefer to include uppercase values in your password?');
-  lowerSelect = window.confirm('Would you prefer to include lowercase values in your passsword?');
-  numSelect = window.confirm('Would you prefer to include numbers in your password?');
-  specialSelect = window.confirm('Would you prefer to include special characters in your password?');
-
-  if (upperSelect) {
-    combinedArray = combinedArray.concat(upperCase);
-  }
-  if (lowerSelect) {
-    combinedArray = combinedArray.concat(lowerCase);
-  }
-  if (numSelect) {
-    combinedArray = combinedArray.concat(numbers);
-  }
-  if (specialSelect) {
-    combinedArray = combinedArray.concat(allSpecialChar);
-  }
-  console.log(combinedArray);
-  for (let i = 0; i < passwordLength; i++) {
-    password = password.concat(combinedArray[Math.floor(Math.random() * combinedArray.length)]
-    );
-  }
-  return password;
+// Gives the user a selection of options to include in password
+// User can choose to include lowercase, uppercase, numeric, or special characters in their password
+// combinedArray will concatinate the corresponding values of each selected character type into itself
+selectUpper = confirm('Would you prefer to include uppercase values in your password?');
+if (selectUpper) {
+  combinedArray = combinedArray.concat(upperCase);
+}
+selectLower = confirm('Would you prefer to include lowercase values in your passsword?');
+if (selectLower) {
+  combinedArray = combinedArray.concat(lowerCase);
+}
+selectNum = confirm('Would you prefer to include numbers in your password?');
+if (selectNum) {
+  combinedArray = combinedArray.concat(numbers);
+}
+selectSpecial = confirm('Would you prefer to include special characters in your password?');
+if (selectSpecial) {
+  combinedArray = combinedArray.concat(allSpecialChar);
 }
 
-// This function creates an array with every selected ASCII character
-// Math.random() randomly chooses characters from this array
+// This for loop will select a random character found within combinedArray and add it to password
+// This looping process will continue until password has a length of the users desired password length (passwordLength)
+for (let i = 0; i < passwordLength; i++) {
+  password = password.concat(combinedArray[Math.floor(Math.random() * combinedArray.length)] 
+  );
+}
+  return password; //returns the password 
+}
+
+// When the user clicks on the "Generate Password" button, all code above will run
 function generateChar(startIndex, endIndex) {
   let charArray = [];
   for (let i = startIndex; i < endIndex; i++) {
