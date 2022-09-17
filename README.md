@@ -11,7 +11,7 @@ This application has an abundance of features as follows:
 - Gives the user the option to choose their desired password length
 - Gives the user the option to include lowercase, uppercase, numeric and/or special charcters in their password
 - Selects completely random values within the desired parameters
-- Automatically copies the generated password to the users password for convenience
+- Automatically copies the generated password to the users clipboard for convenience
 
 ![screenshot](develop/images/employee-password-generator.png)
 
