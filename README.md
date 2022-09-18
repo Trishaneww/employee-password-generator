@@ -15,7 +15,7 @@ This application has an abundance of features as follows:
 
 ![screenshot](develop/images/employee-password-generator.png)
 
-![screenshot](develop/images/generated-password-generator.png)
+![screenshot](develop/images/generated-password.png)
 
 
 
