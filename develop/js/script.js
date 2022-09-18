@@ -11,14 +11,12 @@ const upperCase = generateChar(65, 91);
 const lowerCase = generateChar(97, 123);
 const numbers = generateChar(48, 58);
 
-
 let passwordLength; // Write password to the #password input
 function writePassword() {
   let password = generatePassword();
   let passwordText = document.querySelector("#password"); //Identifies and selects the #password ID in the HTML file
   passwordText.value = password; //Enables the value of passwordText to the generated passworded in this javascript file
 }
-
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
 
@@ -42,46 +40,40 @@ function generatePassword() {
     }
   }
 }
-
-//createPassword will prompt user through the password preference selections then proceeds to combine the ASCII characters that has been assigned from earlier into an array.
-//Then Math.random() will pick randomly through the array and attach itself to the empty string for the final password.
 function createPassword() { //createPassword is the function called from within generatePassword if all parameters are satisfied
   let selectUpper;
   let selectLower;
   let selectNum;
   let selectSpecial;
-  let combinedArray = [];
+  let selectedChars = [];
   let password = '';
-
 // Gives the user a selection of options to include in password
 // User can choose to include lowercase, uppercase, numeric, or special characters in their password
-// combinedArray will concatinate the corresponding values of each selected character type into itself
+// selectedChars will concatinate the corresponding values of each selected character type into itself
 selectUpper = confirm('Would you prefer to include uppercase values in your password?');
 if (selectUpper) {
-  combinedArray = combinedArray.concat(upperCase);
+  selectedChars = selectedChars.concat(upperCase);
 }
 selectLower = confirm('Would you prefer to include lowercase values in your passsword?');
 if (selectLower) {
-  combinedArray = combinedArray.concat(lowerCase);
+  selectedChars = selectedChars.concat(lowerCase);
 }
 selectNum = confirm('Would you prefer to include numbers in your password?');
 if (selectNum) {
-  combinedArray = combinedArray.concat(numbers);
+  selectedChars = selectedChars.concat(numbers);
 }
 selectSpecial = confirm('Would you prefer to include special characters in your password?');
 if (selectSpecial) {
-  combinedArray = combinedArray.concat(allSpecialChar);
+  selectedChars = selectedChars.concat(allSpecialChar);
 }
-
 // This for loop will select a random character found within combinedArray and add it to password
 // This looping process will continue until password has a length of the users desired password length (passwordLength)
 for (let i = 0; i < passwordLength; i++) {
-  password = password.concat(combinedArray[Math.floor(Math.random() * combinedArray.length)] 
+  password = password.concat(selectedChars[Math.floor(Math.random() * selectedChars.length)] 
   );
 }
   return password; //returns the password 
 }
-
 // When the user clicks on the "Generate Password" button, all code above will run
 function generateChar(startIndex, endIndex) {
   let charArray = [];
