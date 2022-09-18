@@ -15,7 +15,12 @@ This application has an abundance of features as follows:
 
 ![screenshot](develop/images/employee-password-generator.png)
 
+![screenshot](develop/images/employee-password-generator.png)
+
+
+
 Link to the [Live Webpage](https://trishaneww.github.io/employee-password-generator/)
+
 
 ## Credits
 
