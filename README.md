@@ -13,10 +13,12 @@ This application has an abundance of features as follows:
 - Selects completely random values within the users desired parameters
 - Displays the randomly generated password to the users screen (users can copy this passcode and use it right away!)
 
-#### WIRE 1
+### WIRE 1
+
 ![screenshot](develop/images/employee-password-generator.png)
 
-#### WIRE 2
+### WIRE 2
+
 ![screenshot](develop/images/generated-password.png)
 
 
